@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 
 int countVowels(String input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+   input = input.toLowerCase();
+  
+  int vowelCount = 0;
+  // Definiere eine Liste mit den Vokalen
+  List<String> vowels = ['a', 'e', 'i', 'o', 'u'];
+  
+  // Iteriere über jeden Buchstaben im String
+  for (int i = 0; i < input.length; i++) {
+    // Überprüfe, ob der Buchstabe ein Vokal ist
+    if (vowels.contains(input[i])) {
+      vowelCount++;
+    }
+  }
+  
+  return vowelCount;
 }
 
 class S3384 extends StatefulWidget {
