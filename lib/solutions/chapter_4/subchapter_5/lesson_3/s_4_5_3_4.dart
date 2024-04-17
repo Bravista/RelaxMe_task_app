@@ -6,7 +6,6 @@ class S4534 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text('App'),
         SizedBox(width: 64),
