@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class S4523 extends StatelessWidget {
-  const S4523({Key? key}) : super(key: key);
+  const S4523({super.key});
   
   @override
   Widget build(BuildContext context) {
@@ -10,14 +10,14 @@ class S4523 extends StatelessWidget {
 }
 
 class MyNameWidget extends StatefulWidget {
-  const MyNameWidget({Key? key}) : super(key: key);
+  const MyNameWidget({super.key});
 
   @override
   MyNameWidgetState createState() => MyNameWidgetState();
 }
 
 class MyNameWidgetState extends State<MyNameWidget> {
-  String _name = ''; // Der Name wird hier gespeichert
+  String name = ''; // Der Name wird hier gespeichert
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +26,14 @@ class MyNameWidgetState extends State<MyNameWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            _name, // Hier wird der aktuelle Name angezeigt
+            name, // Hier wird der aktuelle Name angezeigt
             style: const TextStyle(fontSize: 24.0),
           ),
           ElevatedButton(
             onPressed: () {
               // Wenn der Button gedrückt wird, wird der Name auf "Michael" gesetzt
               setState(() {
-                _name = 'Michael';
+                name = 'Michael';
               });
             },
             child: const Text('Name anzeigen'),
