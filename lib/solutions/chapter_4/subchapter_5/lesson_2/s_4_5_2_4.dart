@@ -7,6 +7,7 @@ class S4524 extends StatelessWidget {
     return const ShowHideNameWidget();
   }
 }
+
 class ShowHideNameWidget extends StatefulWidget {
   const ShowHideNameWidget({super.key});
 
@@ -15,35 +16,32 @@ class ShowHideNameWidget extends StatefulWidget {
 }
 
 class ShowHideNameWidgetState extends State<ShowHideNameWidget> {
-  String name = ''; 
-  String buttonText = 'Name anzeigen'; 
+  String name = '';
+  String buttonText = 'Name anzeigen';
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            name, 
-            style: const TextStyle(fontSize: 24.0),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              setState(() {
-               if (name.isNotEmpty) {
-                  name = ''; 
-                  buttonText = 'Name anzeigen';
-                } else {
-                  name = 'Michael'; 
-                  buttonText = 'Name verstecken';
-                }
-              });
-            },
-            child: Text(buttonText), 
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        Text(
+          name,
+          style: const TextStyle(fontSize: 24.0),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              if (name.isNotEmpty) {
+                name = '';
+                buttonText = 'Name anzeigen';
+              } else {
+                name = 'Michael';
+                buttonText = 'Name verstecken';
+              }
+            });
+          },
+          child: Text(buttonText),
+        ),
+      ],
     );
   }
 }
