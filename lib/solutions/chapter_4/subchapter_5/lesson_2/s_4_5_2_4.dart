@@ -30,7 +30,7 @@ class ShowHideNameWidgetState extends State<ShowHideNameWidget> {
         ElevatedButton(
           onPressed: () {
             setState(() {
-              if (name.isNotEmpty) {
+              if (name.isNotEmpty) {   //ist der String nicht leer
                 name = '';
                 buttonText = 'Name anzeigen';
               } else {
