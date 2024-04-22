@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 FormattedTime formatSeconds(int seconds) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  int hours = seconds ~/ 3600;
+  int minutes = (seconds % 3600) ~/ 60;
+  int remainingSeconds = seconds % 60;
+  
+  return FormattedTime(
+    hours: hours,
+    minutes: minutes,
+    seconds: remainingSeconds,
+  );
 }
 
 class FormattedTime {
@@ -33,7 +40,7 @@ class FormattedTime {
 }
 
 class S3383 extends StatefulWidget {
-  const S3383({Key? key}) : super(key: key);
+  const S3383({super.key});
 
   @override
   State<S3383> createState() => _S3383State();

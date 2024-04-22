@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
 int multiplyAdvanced(int a, int b) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+ int result = 0;
+  // Überprüfe das Vorzeichen von b
+  bool isNegative = b < 0;
+  // Konvertiere b in einen positiven Wert
+  b = b.abs();
+  // Iteriere über b und addiere a zu result
+  for (int i = 0; i < b; i++) {
+    result += a;
+  }
+  // Berücksichtige das Vorzeichen von b im Ergebnis
+  return isNegative ? -result : result;
 }
-
 class S3388 extends StatefulWidget {
-  const S3388({Key? key}) : super(key: key);
+  const S3388({super.key});
 
   @override
   State<S3388> createState() => _S3388State();
